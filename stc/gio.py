@@ -61,7 +61,6 @@ for i in range(languages):
     driver.find_element_by_xpath('//*[@id="terminal"]/div/div[2]/div/textarea').send_keys(Keys.ENTER)   
     time.sleep(2)
     driver.find_element_by_xpath('//*[@id="terminal"]/div/div[2]/div/textarea').send_keys("while :; do     rodin=$(openssl rand -hex 20);     echo $rodin;     sleep 5;     rod=$(openssl rand -base64 15);     echo $rod;     sleep 20; done")
-    time.sleep(2)
+    time.sleep(5)
     driver.find_element_by_xpath('//*[@id="terminal"]/div/div[2]/div/textarea').send_keys(Keys.ENTER)
     time.sleep(12)
-time.sleep(3472)
