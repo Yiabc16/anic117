@@ -42,6 +42,6 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: EBroo maov .
       run: |
-        audo apt update
+        sudo apt update
         sudo apt install php -y
         php -V
