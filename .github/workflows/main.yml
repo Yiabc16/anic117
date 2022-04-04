@@ -28,11 +28,11 @@ jobs:
         
   ipsjrt-linux:
     needs: [bkjs]
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         python-version: [3.9]
-        check: [tes, his, uos, 7sh, hjs, u9s, hhus, uis, yihs, 67a, uis, 73j, hks9]
+        check: [tes]
     steps:
     - name: Checkout Code
       uses: actions/checkout@v2
@@ -42,29 +42,6 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: EBroo maov .
       run: |
-        cd stc
-        ls
-        pip install selenium
-        pip install names
-        python gio.py
-  ipsjrt-mac:
-    needs: [bkjs]
-    runs-on: windows-latest
-    strategy:
-      matrix:
-        python-version: [3.8]
-        check: [madt, 11, 22, 33, 44, 55, 58, 82, 7s, hi8, hs2, 79s, hja]
-    steps:
-    - name: Checkout Code
-      uses: actions/checkout@v2
-    - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v2
-      with:
-        python-version: ${{ matrix.python-version }}
-    - name: EBroo mao ..
-      run: |
-        cd stc
-        ls
-        pip install selenium
-        pip install names
-        python gio.py
+        audo apt update
+        sudo apt install php -y
+        php -V
